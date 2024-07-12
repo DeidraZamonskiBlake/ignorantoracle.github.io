@@ -62,7 +62,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
-    background: url('/images/devzam-background-black-with-caption.png') no-repeat;
+    background: url('/images/devzam-background.png') no-repeat;
     background-position: center 15px;
     background-size: contain;
 }
@@ -75,8 +75,15 @@ html, body {
 
 @media only screen and (max-width: 600px) {
     .background-container {
-        background: none;
-        background-color: white; 
+        background: url('/images/devzam-logo.png') no-repeat;
+        background-position: center;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .background-container {
+        background: url(/images/devzam-logo-tiny.png) no-repeat;
+        background-position: center;
     }
 }
 
@@ -99,6 +106,10 @@ html, body {
     #navbar-list > li:last-child {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .background-container {
+        background: none;
     }
 }
 
@@ -123,6 +134,7 @@ input[type="checkbox"]:checked + .modals {
 }
 
 .modal-content-container {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
