@@ -1,19 +1,10 @@
 #navbar-list,
-#general-skills {
+#languages-list {
     list-style: none;
 }
 
 a {
     text-decoration: none;
-}
-
-li.navbar-list:link {
-    color: black;
-
-}
-
-.navbar-link:visited {
-    color: black;
 }
 
 #navbar {
@@ -65,12 +56,6 @@ html, body {
     background: url('/images/devzam-background.png') no-repeat;
     background-position: center;
     background-size: contain;
-}
-
-#content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
 }
 
 @media only screen and (max-width: 600px) {
@@ -141,18 +126,121 @@ input[type="checkbox"]:checked + .modals {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: white;
     margin: auto;
     height: fit-content;
     width: fit-content;
-    padding: 10px 20px;
+    padding: 20px 40px 40px;
+    text-align: center;
+}
+
+.close {
+    font-size: 28px;
+    font-weight: 500;
+    float: right;
 }
 
 h2 {
     font-family: "Anton", sans-serif;
 }
 
-.fa-x {
-    font-size: 100px;
-    z-index: 10;
+#bio-container,
+#devzam-bio {
+    width: 300px;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+#languages-list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+#languages-list > li {
+    display: inline-block;
+    margin: 0 20px;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.modal-headers {
+    font-family: "Anton", sans-serif;
+    margin-bottom: 10px;
+}
+
+#devzam-bio {
+    font-style: italic;
+    margin-bottom: 25px;
+    font-weight: 450;
+}
+
+#name-header {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+#owner-title-container {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 350;
+    font-size: 18px;
+    margin-top: 0px;
+}
+
+#bio-container {
+    font-weight: 500;
+}
+
+#vp-api-img-container > img {
+    width: auto; 
+    height: auto;
+}
+
+.project-headers {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+#projects-section h2 {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#vp-amok-img-container > img {
+    width: auto; 
+    height: auto;
+}
+
+#projects-grid {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 20px; 
+}
+
+#projects-grid > article:not(:last-child) {
+    margin-right: 20px; 
+}
+
+#projects-grid > article:not(:first-child) {
+    margin-left: 20px; 
+}
+
+.repository-links {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 15px;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+.project-bios {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
 }

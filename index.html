@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-xJv5g6kFNyzVnR9kpXR18GJFf4FZ7tbTfzTWtrJd3Yw4eXKJ8bG5RLvR1yB6VH43" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <title>Deidra Zamonski-Blake's Software Development Portfolio</title>
 </head>
@@ -27,9 +28,36 @@
                 <div class="modals" id="about-model">
                     <div class="modal-content-container">
                         <div class="modal-content" id="about-content">
-                            <label for="about-toggle" class="close"><i class="fa-sharp fa-solid fa-x">x</i></label>
+                            <label for="about-toggle" class="close">&times;</label>
                             <section id="about-section">
                                 <h2>about</h2>
+                                <div id="devzam-bio">
+                                    <p>devzam projects provide interactive, comprehensively tested and scalable interfaces with cross-network functionality</p>
+                                </div>
+                                <h3 class="modal-headers">the team</h3>
+                                <h3 id="name-header">Deidra Zamonski-Blake</h3>
+                                
+                                <div id="portrait-container">
+                                    <img 
+                                        src="/images/deidra-professional-photo.jpg"
+                                        alt="Profession Photo of Deidra Zamonski-Blake"
+                                        title="Deidra Zamonski-Blake"
+                                    />
+                                </div>
+                                <div id="owner-title-container">
+                                    <span>owner</span>
+                                </div>
+                                <div id="bio-container">
+                                    <p>Deidra is an entry-level full-stack web developer located in Columbus, OH. She and her husband of three years, Christopher, had their first child, Beorn, at the end of 2023 and she will soon be a new graduate of the trade school We Can Code It.</p>
+                                </div>
+                                <div id="skill-set-container">
+                                    <h3 class="modal-headers">languages</h3>
+                                    <ul id="languages-list">
+                                        <li>Java</li>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                    </ul>
+                                </div>
                             </section>
                         </div>
                     </div>
@@ -38,9 +66,62 @@
                 <div class="modals" id="projects-model">
                     <div class="modal-content-container">
                         <div class="modal-content">
-                            <label for="projects-toggle" class="close"><i class="fa-sharp fa-solid fa-x"></i></label>
+                            <label for="projects-toggle" class="close">&times;</label>
                             <section id="projects-section">
-                                <h2>projects</h2>
+                                <div>
+                                    <h2>projects</h2>
+                                </div>
+                                <div id="projects-grid">
+                                    <article class="project-containers">
+                                        <h3 class="project-headers">Virtual Pets Api</h3>
+                                        <div id="vp-api-img-container">
+                                            <img 
+                                            src="/images/virtual-pet-api-postman.png"
+                                            alt="Virtual Pets API project by devzam postman 'get all pets' request, listing three pets in repository"
+                                            title="Virtual Pets API by devzam Postman Requests"
+                                            />
+                                        </div>
+                                        <div class="project-bios">
+                                            <p>skills used</p>
+                                        </div>
+                                        <div class="repository-links">
+                                            <p><a href="https://github.com/WeCanCodeIT/homework----virtual-pet-part-4-api-IgnorantOracle">GitHub Repository</a></p>
+                                        </div>
+                                        <!-- still need repository links and skills used for each project -->
+                                    </article>
+                                    <article class="project-containers">
+                                        <h3 class="project-headers">Virtual Pets Amok</h3>
+                                        <div id="vp-amok-img-container">
+                                            <img 
+                                                src="/images/virtual-pets-amok.png"
+                                                alt="Virtual Pets Amok game display by devzam"
+                                                title="Virtual Pets Amok Game Display by devzam"
+                                            />
+                                        </div>
+                                        <div class="project-bios">
+                                            <p>skills used</p>
+                                        </div>
+                                        <div class="repository-links">
+                                            <p><a href="https://github.com/WeCanCodeIT/homework----virtual-pet-part-3-amok-IgnorantOracle">GitHub Repository</a></p>
+                                        </div>
+                                    </article>
+                                    <article class="project-containers">
+                                        <h3 class="project-headers">Virtual Pets Shelter</h3>
+                                        <div id="vp-shelter-img-container">
+                                            <img 
+                                                src="/images/virtual-pets-shelter.png"
+                                                alt="Virtual Pets shelter game display by devzam"
+                                                title="Virtual Pets Shelter Game Display by devzam"
+                                            />
+                                        </div>
+                                        <div class="project-bios">
+                                            <p>skills used</p>
+                                        </div>
+                                        <div class="repository-links">
+                                            <p><a href="https://github.com/WeCanCodeIT/homework-virtual-pet-part-2-shelter-v1-01-IgnorantOracle">GitHub Repository</a></p>
+                                        </div>
+                                    </article>
+                                </div>
                             </section>
                         </div>
                     </div>
@@ -59,33 +140,9 @@
             </header>
             <!--
 
-
                 <div id="projects-grid">
                     <article>
-                        <h3><a href="https://github.com/WeCanCodeIT/homework----virtual-pet-part-4-api-IgnorantOracle">virtual pets api</a></h3>
-                        <img 
-                            src="/images/virtual-pet-api-postman.png"
-                            alt="Virtual Pets API project by devzam postman 'get all pets' request, listing three pets in repository"
-                            title="Virtual Pets API by devzam Postman Requests"
-                        />
-                        <p>add skills used</p>
-                    </article>
-                    <article>
-                        <h3><a href="https://github.com/WeCanCodeIT/homework----virtual-pet-part-3-amok-IgnorantOracle">virtual pets amok</a></h3>
-                        <img 
-                            src="/images/virtual-pets-amok-1.png"
-                            alt="Virtual Pets Amok game display by devzam"
-                            title="Virtual Pets Amok Game Display by devzam"
-                        />
-                        <img 
-                            src="/images/virtual-pets-amok-2.png"
-                            alt="Virtual Pets Amok menu display by devzam"
-                            title="Virtual Pets Amok Menu Display by devzam"
-                        />
-                        <p>add skills used</p>
-                    </article>
-                    <article>
-                        <h3><a href="https://github.com/WeCanCodeIT/homework-virtual-pet-part-2-shelter-v1-01-IgnorantOracle">virtual pets shelter</a></h3>
+                        <h3><a >virtual pets shelter</a></h3>
                         <img
                             src="/images/virtual-pets-shelter.png"
                             alt="Virtual Pets shelter game display by devzam"
@@ -94,38 +151,24 @@
                         <p>add skills used</p>
                     </article>
                 </div>
+            
             -->
         </div>
     </div>
                 <!--
-                <div id="content">
-                    <section id="about">
-                        <h2>about</h2>
-                        <img 
-                            src="/images/deidra-professional-photo.jpg"
-                            alt="Profession Photo of Deidra Zamonski-Blake"
-                            title="Deidra Zamonski-Blake"
-                        />
-                        <p>Deidra Zamonski-Blake is an entry-level full-stack web developer located in Columbus, OH. She and her husband of three years, Christopher had their first child Beorn in 2023 and she will soon be a new graduate of the trade school We Can Code It.</p>
-                        <h3>skill set</h3>
-                        <ul id="general-skills">
-                            <li>Java</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                        </ul>
-                        <p>devzam projects provide interactive,comprehensively tested and scalable interfaces with cross-network functionality. </p>
-                        <section id="connect">
-                            <h3 >connect</h3>
-                            <p>
-                                inquiries<span>: </span>
-                                <span>contact-devzam@gmail.com</span>
-                            </p>
-                            <p><a href="https://www.linkedin.com/in/deidra-clay-b70087319/">LinkedIn</a></p>
-                            <p><a href="https://github.com/IgnorantOracle">Github</a></p>
-                        </section>
-                    </section> 
-                </div>
-                <footer>
+
+                <section id="connect">
+                        <h3 >connect</h3>
+                        <p>
+                            inquiries<span>: </span>
+                            <span>contact-devzam@gmail.com</span>
+                        </p>
+                        <p><a href="https://www.linkedin.com/in/deidra-clay-b70087319/">LinkedIn</a></p>
+                        <p><a href="https://github.com/IgnorantOracle">Github</a></p>
+                    </section>
+
+
+                    <footer>
                     <p>
                         <a href="#logo">back to top</a>
                         <img
