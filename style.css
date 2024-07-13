@@ -63,7 +63,7 @@ html, body {
     flex-direction: column;
     justify-content: space-between; 
     background: url('/images/devzam-background.png') no-repeat;
-    background-position: center 15px;
+    background-position: center;
     background-size: contain;
 }
 
@@ -134,7 +134,7 @@ input[type="checkbox"]:checked + .modals {
 }
 
 .modal-content-container {
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,12 +143,12 @@ input[type="checkbox"]:checked + .modals {
 .modal-content {
     background-color: #fefefe;
     margin: auto;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 20px;
 }
 
-.modal-content-sample {
-    background-color: #fefefe;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+h2 {
+    font-family: "Anton", sans-serif;
 }
+
