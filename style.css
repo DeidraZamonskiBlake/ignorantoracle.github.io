@@ -152,3 +152,7 @@ h2 {
     font-family: "Anton", sans-serif;
 }
 
+.fa-x {
+    font-size: 100px;
+    z-index: 10;
+}
