@@ -56,7 +56,8 @@ h3 {
     height: 100vh; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: center; 
+    align-items: center;
     background: url('/images/devzam-background.png') no-repeat;
     background-position: center;
     background-size: contain;
@@ -313,6 +314,7 @@ a:visited {
 #projects-main-header {
     padding-top: 20px;
     padding-bottom: 20px;
+    font-family: "Anton", sans-serif;
 }
 
 #back-to-top {
@@ -335,14 +337,58 @@ a:visited {
     right: 0px;
 }
 
-#contact-info,
-.connect-links {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 600;
-    font-size: 15px;
+#email,
+#phone {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
 }
 
 #connect-tagline {
     font-family: "Anton", sans-serif;
+    margin-bottom: -10px;
+}
+
+.contact-info-header {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    margin-bottom: -20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+
+#signature {
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    font-family: "Playwrite DK Uloopet", cursive;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+}
+
+.connect-links {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+#links-header {
     margin-bottom: -10px;
 }
