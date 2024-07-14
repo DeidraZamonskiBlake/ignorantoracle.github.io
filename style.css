@@ -14,6 +14,11 @@ html, body {
     flex-direction: column;
 }
 
+h2,
+h3 {
+    font-family: "Anton", sans-serif;
+}
+
 #navbar {
     width: 100vw;    
     height: 45px;
@@ -122,6 +127,7 @@ input[type="checkbox"]:checked + .modals {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .modal-content {
@@ -129,19 +135,20 @@ input[type="checkbox"]:checked + .modals {
     margin: auto;
     height: fit-content;
     width: fit-content;
-    padding: 20px 40px 40px;
+    padding: 20px 30px 40px;
     text-align: center;
+    max-width: 80%;
+    position: relative;
 }
 
 .close {
     font-size: 28px;
     font-weight: 500;
-    float: right;
+    position: absolute; 
+    top: 20px;
+    right: 30px;
 }
 
-h2 {
-    font-family: "Anton", sans-serif;
-}
 
 #bio-container,
 #devzam-bio {
@@ -163,8 +170,9 @@ h2 {
 }
 
 .modal-headers {
-    font-family: "Anton", sans-serif;
-    margin-bottom: 10px;
+    padding-top: 0px;
+    font-family: 'Open Sans' sans-serif;
+    text-align: center;
 }
 
 #devzam-bio {
@@ -194,10 +202,13 @@ h2 {
 #vp-api-img-container > img {
     width: auto; 
     height: auto;
+    margin: -5px;
 }
 
 .project-headers {
     font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    margin: 0px auto 10px;
 }
 
 #projects-section h2 {
@@ -209,27 +220,22 @@ h2 {
 #vp-amok-img-container > img {
     width: auto; 
     height: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #projects-grid {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    margin-top: 20px; 
-}
-
-#projects-grid > article:not(:last-child) {
-    margin-right: 20px; 
-}
-
-#projects-grid > article:not(:first-child) {
-    margin-left: 20px; 
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(1, minmax(350px, 1fr));
 }
 
 .repository-links {
     font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 115px2px;
-    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 35px;
+    margin-bottom: 20px;
 }
 
 a:link {
@@ -241,11 +247,21 @@ a:visited {
 }
 
 .skills-used-headers {
-    margin-top: 0px;
+    margin-top: -5px;
+    margin-bottom: -10px;
 }
 
 .capital-headers {
     font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    margin-bottom: -20px;
+    padding: 0px;
+    text-align: center;
+}
+
+.skills-used-lists {
+    margin-bottom: -10px;
+    padding-left: 0px;
 }
 
 .skills-used-lists > li {
@@ -253,6 +269,80 @@ a:visited {
     font-weight: 500;
 }
 
+.skills-used-lists-containers {
+    margin-bottom: 10px;
+}
+
 .project-img-containers {
-    margin-bottom: 0px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-header-section {
+    position: relative;
+}
+
+.modal-main-headers {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: -20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#amok-small {
+    display: none;
+}
+
+@media only screen and (max-width: 775px) {
+    #amok-large {
+        display: none;
+    }
+
+    #amok-small {
+        display: block;
+        width: auto; 
+        height: auto; 
+        margin: 0 auto;
+    }
+}
+
+#projects-main-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#back-to-top {
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 30px;
+    margin-bottom: -20px;
+    padding-bottom: 0px;
+    font-size: 20px;
+}
+
+.header-section {
+    display: flex;
+}
+
+#projects-close {
+    font-size: 28px;
+    font-weight: 500;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+#contact-info,
+.connect-links {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+#connect-tagline {
+    font-family: "Anton", sans-serif;
+    margin-bottom: -10px;
 }

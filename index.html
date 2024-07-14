@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-xJv5g6kFNyzVnR9kpXR18GJFf4FZ7tbTfzTWtrJd3Yw4eXKJ8bG5RLvR1yB6VH43" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <title>Deidra Zamonski-Blake's Software Development Portfolio</title>
 </head>
@@ -28,9 +29,13 @@
                 <div class="modals" id="about-model">
                     <div class="modal-content-container">
                         <div class="modal-content" id="about-content">
-                            <label for="about-toggle" class="close">&times;</label>
                             <section id="about-section">
-                                <h2>about</h2>
+                                <div class="header-section">
+                                    <div class="modal-main-headers">
+                                        <h2>about</h2>
+                                    </div>
+                                    <label for="about-toggle" class="close">&times;</label>
+                                </div>
                                 <div id="devzam-bio">
                                     <p>devzam projects provide interactive, comprehensively tested and scalable interfaces with cross-network functionality</p>
                                 </div>
@@ -65,10 +70,12 @@
                 <div class="modals" id="projects-model">
                     <div class="modal-content-container">
                         <div class="modal-content">
-                            <label for="projects-toggle" class="close">&times;</label>
                             <section id="projects-section">
-                                <div>
-                                    <h2>projects</h2>
+                                <div class="modal-header-section">
+                                    <label for="projects-toggle" id="projects-close">&times;</label>
+                                    <div id="projects-main-header">
+                                        <h2>projects</h2>
+                                    </div>
                                 </div>
                                 <div id="projects-grid">
                                     <article class="project-containers" id="vp-amok-container">
@@ -78,28 +85,52 @@
                                                 src="/images/virtual-pets-amok.png"
                                                 alt="Virtual Pets Amok game display by devzam"
                                                 title="Virtual Pets Amok Game Display by devzam"
+                                                id="amok-large"
+                                            />
+                                            <img 
+                                                src="/images/virtual-pets-amok-2.png"
+                                                alt="Virtual Pets Amok game display by devzam small version"
+                                                title="Virtual Pets Amok Game Display by devzam small version"
+                                                id="amok-small"
                                             />
                                         </div>
-                                        <div class="capital-headers">
                                         <div class="modal-headers skills-used-headers">
                                             <h3>skills used</h3>
                                         </div>
-                                            <h3>Spring Boot</h3>
+                                        <div class="capital-headers">
+                                            <h4>Object-Oriented Programming</h4>
                                         </div>
                                         <div class="skills-used-lists-container">
                                             <ul class="skills-used-lists">
-                                                <li>Setting up a project using Spring Initializer</li>
-                                                <li>Configuring dependencies (JPA, Web, H2, Spring Boot, Lombok)</li>
+                                                <li>Designing class hierarchies using abstract classes and interfaces</li>
+                                                <li>Encapsulating instance variables and defining appropriate visibility modifiers</li>
                                             </ul>
                                         </div>
                                         <div class="project-bios">
                                             <div class="capital-headers">
-                                                <h3>Spring Boot</h3>
+                                                <h4>Java Programming</h4>
                                             </div>
                                             <div class="skills-used-lists-container">
                                                 <ul class="skills-used-lists">
-                                                    <li>Setting up a project using Spring Initializer</li>
-                                                    <li>Configuring dependencies (JPA, Web, H2, Spring Boot, Lombok)</li>
+                                                    <li>Designing class hierarchies using abstract classes and interfaces</li>
+                                                    <li>Knowledge of Java collections (like HashMaps) for managing pet-related data</li>
+                                                </ul>
+                                            </div>
+                                            <div class="capital-headers">
+                                                <h4>Design Patterns</h4>
+                                            </div>
+                                            <div class="skills-used-lists-container">
+                                                <ul class="skills-used-lists">
+                                                    <li>Ability to design a flexible and extensible class hierarchy for different types of pets (organic and robotic)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="capital-headers">
+                                                <h4>Software Development Practices</h4>
+                                            </div>
+                                            <div class="skills-used-lists-container">
+                                                <ul class="skills-used-lists">
+                                                    <li>Test-Driven Development (TDD) to ensure pet behaviors are correctly implemented and tested</li>
+                                                    <li>Clean code practices for maintainability and readability</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -107,11 +138,11 @@
                                             <p><a href="https://github.com/WeCanCodeIT/homework----virtual-pet-part-3-amok-IgnorantOracle">View GitHub Repository</a></p>
                                         </div>
                                     </article>
-                                    <article class="project-containers">
+                                    <article class="project-containers" id="vp-api-container">
                                         <h3 class="project-headers">Virtual Pets Api</h3>
                                         <div id="vp-api-img-container" class="project-img-containers">
                                             <img 
-                                            src="/images/virtual-pet-api-postman.png"
+                                            src="/images/virtual-pets-api.png"
                                             alt="Virtual Pets API project by devzam postman 'get all pets' request, listing three pets in repository"
                                             title="Virtual Pets API by devzam Postman Requests"
                                             />
@@ -121,7 +152,7 @@
                                                 <h3>skills used</h3>
                                             </div>
                                             <div class="capital-headers">
-                                                <h3>Spring Boot</h3>
+                                                <h4>Spring Boot</h4>
                                             </div>
                                             <div class="skills-used-lists-container">
                                                 <ul class="skills-used-lists">
@@ -130,7 +161,7 @@
                                                 </ul>
                                             </div>
                                             <div class="capital-headers">
-                                                <h3 >Java Persistence API (JPA)</h3>
+                                                <h4 >Java Persistence API (JPA)</h4>
                                             </div>
                                             <div class="skills-used-lists-container">
                                                 <ul class="skills-used-lists">
@@ -140,7 +171,7 @@
                                                 </ul>
                                             </div>
                                             <div class="capital-headers">
-                                                <h3 >Spring MVC</h3>
+                                                <h4>Spring MVC</h4>
                                             </div>
                                             <div class="skills-used-lists-container">
                                                 <ul class="skills-used-lists">
@@ -150,25 +181,12 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                            <div class="modal-headers skills-used-headers">
-                                                <h3>skills used</h3>
-                                            </div>
-                                            <div class="capital-headers">
-                                                <h3>Spring Boot</h3>
-                                            </div>
-                                            <div class="skills-used-lists-container">
-                                                <ul class="skills-used-lists">
-                                                    <li>Setting up a project using Spring Initializer</li>
-                                                    <li>Configuring dependencies (JPA, Web, H2, Spring Boot, Lombok)</li>
-                                                </ul>
-                                            </div>
-                                        </div>
                                         <div class="repository-links">
                                             <p><a href="https://github.com/WeCanCodeIT/homework----virtual-pet-part-4-api-IgnorantOracle">View GitHub Repository</a></p>
                                         </div>
                                         <!-- still need repository links and skills used for each project -->
                                     </article>
-                                    <article class="project-containers">
+                                    <article class="project-containers" id="vp-shelter-container">
                                         <h3 class="project-headers">Virtual Pets Shelter</h3>
                                         <div id="vp-shelter-img-container" class="project-img-containers">
                                             <img 
@@ -178,10 +196,51 @@
                                             />
                                         </div>
                                         <div class="project-bios">
-                                            <p>skills used</p>
+                                            <div class="modal-headers skills-used-headers">
+                                                <h3>skills used</h3>
+                                            </div>
+                                            <div class="capital-headers">
+                                                <h4>Java Programming</h4>
+                                            </div>
+                                            <div class="skills-used-lists-container">
+                                                <ul class="skills-used-lists">
+                                                    <li>Object-Oriented Programming (OOP)</li>
+                                                    <li>Class and object creation</li>
+                                                    <li>Method definition and invocation</li>
+                                                </ul>
+                                            </div>
+                                            <div class="capital-headers">
+                                                <h4>Software Design</h4>
+                                            </div>
+                                            <div class="skills-used-lists-container">
+                                                <ul class="skills-used-lists">
+                                                    <li>Designing classes</li>
+                                                    <li>Designing methods for class interactions</li>
+                                                </ul>
+                                            </div>
+                                            <div class="capital-headers">
+                                                <h4>Collections Framework</h4>
+                                            </div>
+                                            <div class="skills-used-lists-container">
+                                                <ul class="skills-used-lists">
+                                                    <li>Using collections like List or Map to store and manage multiple pets</li>
+                                                </ul>
+                                            </div>
+                                            <div class="capital-headers">
+                                                <h4>User Input Handling</h4>
+                                            </div>
+                                            <div class="skills-used-lists-container">
+                                                <ul class="skills-used-lists">
+                                                    <li>Reading user input using Scanner</li>
+                                                    <li>Handling user input and validating it</li>
+                                                </ul>
+                                            </div>
                                         </div>
                                         <div class="repository-links">
                                             <p><a href="https://github.com/WeCanCodeIT/homework-virtual-pet-part-2-shelter-v1-01-IgnorantOracle">View GitHub Repository</a></p>
+                                        </div>
+                                        <div id="back-to-top">
+                                            <p><a href="#projects-main-header">back to top</a></p>
                                         </div>
                                     </article>
                                 </div>
@@ -193,44 +252,34 @@
                 <div class="modals" id="connect-model">
                     <div class="modal-content-container">
                         <div class="modal-content">
-                            <label for="connect-toggle" class="close">&times;</label>
                             <section id="connect-section">
-                                <h2>connect</h2>
+                                <div class="header-section">
+                                    <div class="modal-main-headers">
+                                        <h2>connect</h2>
+                                    </div>
+                                    <label for="connect-toggle" class="close">&times;</label>
+                                </div>
+                                <div id="contact-info">
+                                    <p>contact-devzam@gmail.com</p>
+                                    <p>513-833-0273</p>
+                                </div>
+                                <div id="github-link" class="connect-links">
+                                    <p><a href="https://github.com/IgnorantOracle">GitHub</a></p>
+                                </div>
+                                <div id="linkedin-link" class="connect-links">
+                                    <p><a href="https://www.linkedin.com/in/deidra-clay-b70087319/">LinkedIn</a></p>
+                                </div>
+                                <div id="connect-tagline">
+                                    <p>let's get to work</p>
+                                </div>
                             </section>
                         </div>
                     </div>
                 </div>
             </header>
-            <!--
-
-                <div id="projects-grid">
-                    <article>
-                        <h3><a >virtual pets shelter</a></h3>
-                        <img
-                            src="/images/virtual-pets-shelter.png"
-                            alt="Virtual Pets shelter game display by devzam"
-                            title="Virtual Pets Shelter Game Display by devzam"
-                        />
-                        <p>add skills used</p>
-                    </article>
-                </div>
-            
-            -->
         </div>
     </div>
                 <!--
-
-                <section id="connect">
-                        <h3 >connect</h3>
-                        <p>
-                            inquiries<span>: </span>
-                            <span>contact-devzam@gmail.com</span>
-                        </p>
-                        <p><a href="https://www.linkedin.com/in/deidra-clay-b70087319/">LinkedIn</a></p>
-                        <p><a href="https://github.com/IgnorantOracle">Github</a></p>
-                    </section>
-
-
                     <footer>
                     <p>
                         <a href="#logo">back to top</a>
