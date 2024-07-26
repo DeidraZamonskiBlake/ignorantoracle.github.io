@@ -1,394 +1,562 @@
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 h2,
 h3 {
-    font-family: "Anton", sans-serif;
+  font-family: "Anton", sans-serif;
 }
 
 #navbar {
-    width: 100vw;    
-    height: 45px;
-    display: flex;
+  width: 100vw;
+  height: 45px;
+  display: flex;
 }
 
 #navbar-list {
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
 
 #navbar-list > li {
-    display: inline-block;
-    font-family: "Open Sans", sans-serif;
-    line-height: 45px;
-    font-weight: 450;
-    font-size: 17px;
-    padding-top: 7px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 45px;
+  font-weight: 450;
+  font-size: 17px;
+  padding-top: 7px;
 }
 
 #navbar-list > li:first-child {
-    padding-left: 50px;
+  padding-left: 50px;
 }
 
 #navbar-list > li:last-child {
-    padding-right: 50px;
+  padding-right: 50px;
 }
 
 .background-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    background: url('/images/devzam-background.png') no-repeat;
-    background-position: center;
-    background-size: contain;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("./images/devzam-background-black-with-caption.png") no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 @media only screen and (max-width: 600px) {
-    .background-container {
-        background: url('/images/devzam-logo.png') no-repeat;
-        background-position: center;
-    }
+  .background-container {
+    background: url("/images/devzam-logo.png") no-repeat;
+    background-position: center;
+  }
 }
 
 @media only screen and (max-width: 440px) {
-    .background-container {
-        background: url(/images/devzam-logo-tiny.png) no-repeat;
-        background-position: center;
-    }
+  .background-container {
+    background: url(/images/devzam-logo-tiny.png) no-repeat;
+    background-position: center;
+  }
 }
 
 @media only screen and (max-width: 320px) {
-    #navbar {
-        flex-direction: column;
-        height: auto;
-    }
+  #navbar {
+    flex-direction: column;
+    height: auto;
+  }
 
-    #navbar-list {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    #navbar-list > li {
-        padding: 10px 0;
-    }
+  #navbar-list {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    #navbar-list > li:first-child,
-    #navbar-list > li:last-child {
-        padding-left: 0;
-        padding-right: 0;
-    }
+  #navbar-list > li {
+    padding: 10px 0;
+  }
 
-    .background-container {
-        background: none;
-    }
+  #navbar-list > li:first-child,
+  #navbar-list > li:last-child {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .background-container {
+    background: none;
+  }
 }
 
 input[type="checkbox"] {
-    display: none;
+  display: none;
 }
 
 input[type="checkbox"]:checked + .modals {
-    display: block;
+  display: block;
 }
 
 .modals {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content-container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .modal-content {
-    background-color: white;
-    margin: auto;
-    height: fit-content;
-    width: fit-content;
-    padding: 20px 30px 40px;
-    text-align: center;
-    max-width: 80%;
-    position: relative;
+  background-color: white;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  padding: 20px 30px 40px;
+  text-align: center;
+  max-width: 80%;
+  position: relative;
 }
 
 .close {
-    font-size: 28px;
-    font-weight: 500;
-    position: absolute; 
-    top: 20px;
-    right: 30px;
+  font-size: 28px;
+  font-weight: 500;
+  position: absolute;
+  top: 20px;
+  right: 30px;
 }
-
 
 #bio-container,
 #devzam-bio {
-    width: 300px;
-    font-family: 'Hanken Grotesk', sans-serif;
+  width: 300px;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 #languages-list {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 #languages-list > li {
-    display: inline-block;
-    margin: 0 20px;
-    font-family: 'Hanken Grotesk', sans-serif;
+  display: inline-block;
+  margin: 0 20px;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .modal-headers {
-    padding-top: 0px;
-    font-family: 'Open Sans' sans-serif;
-    text-align: center;
+  padding-top: 0px;
+  font-family: "Open Sans" sans-serif;
+  text-align: center;
 }
 
 #devzam-bio {
-    font-style: italic;
-    margin-bottom: 25px;
-    font-weight: 450;
+  font-style: italic;
+  margin-bottom: 25px;
+  font-weight: 450;
 }
 
 #name-header {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 30px;
-    margin-top: 0px;
-    margin-bottom: 5px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
 
 #owner-title-container {
-    font-family: 'Hanken Grotesk', sans-serif;
-    font-weight: 350;
-    font-size: 18px;
-    margin-top: 0px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 350;
+  font-size: 18px;
+  margin-top: 0px;
 }
 
 #bio-container {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 #vp-api-img-container > img {
-    width: auto; 
-    height: auto;
-    margin: -5px;
+  width: auto;
+  height: auto;
+  margin: -5px;
 }
 
 .project-headers {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 25px;
-    margin: 0px auto 10px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 25px;
+  margin: 0px auto 10px;
 }
 
 #projects-section h2 {
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
 }
 
 #vp-amok-img-container > img {
-    width: auto; 
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #projects-grid {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(1, minmax(350px, 1fr));
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(1, minmax(350px, 1fr));
 }
 
 .repository-links {
-    font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 35px;
-    margin-bottom: 20px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 35px;
+  margin-bottom: 20px;
 }
 
 a:link {
-    color: black;
+  color: black;
 }
 
 a:visited {
-    color: black;
+  color: black;
 }
 
 .skills-used-headers {
-    margin-top: -5px;
-    margin-bottom: -10px;
+  margin-top: -5px;
+  margin-bottom: -10px;
 }
 
 .capital-headers {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 18px;
-    margin-bottom: -20px;
-    padding: 0px;
-    text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  margin-bottom: -20px;
+  padding: 0px;
+  text-align: center;
 }
 
 .skills-used-lists {
-    margin-bottom: -10px;
-    padding-left: 0px;
+  margin-bottom: -10px;
+  padding-left: 0px;
 }
 
 .skills-used-lists > li {
-    font-family: 'Hanken Grotesk', sans-serif;
-    font-weight: 500;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
 }
 
 .skills-used-lists-containers {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .project-img-containers {
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
 }
 
 .modal-header-section {
-    position: relative;
+  position: relative;
 }
 
 .modal-main-headers {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin-top: 0px;
-    margin-bottom: -20px;
-    margin-left: auto;
-    margin-right: auto;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: -20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #amok-small {
-    display: none;
+  display: none;
 }
 
 @media only screen and (max-width: 775px) {
-    #amok-large {
-        display: none;
-    }
+  #amok-large {
+    display: none;
+  }
 
-    #amok-small {
-        display: block;
-        width: auto; 
-        height: auto; 
-        margin: 0 auto;
-    }
+  #amok-small {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
 }
 
 #projects-main-header {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-family: "Anton", sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Anton", sans-serif;
 }
 
 #back-to-top {
-    font-family: "Bebas Neue", sans-serif;
-    margin-top: 30px;
-    margin-bottom: -20px;
-    padding-bottom: 0px;
-    font-size: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  margin-top: 30px;
+  margin-bottom: -20px;
+  padding-bottom: 0px;
+  font-size: 20px;
 }
 
 .header-section {
-    display: flex;
+  display: flex;
 }
 
 #projects-close {
-    font-size: 28px;
-    font-weight: 500;
-    position: absolute;
-    top: 0px;
-    right: 0px;
+  font-size: 28px;
+  font-weight: 500;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 #email,
 #phone {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
 }
 
 #connect-tagline {
-    font-family: "Anton", sans-serif;
-    margin-bottom: -10px;
+  font-family: "Anton", sans-serif;
+  margin-bottom: -10px;
 }
 
 .contact-info-header {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 20px;
-    margin-bottom: -20px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  margin-bottom: -20px;
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
 }
 
-
 #signature {
-    width: 100%;
-    height: 100%;
-    line-height: 50px;
-    text-align: center;
-    font-family: "Playwrite DK Uloopet", cursive;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  font-family: "Playwrite DK Uloopet", cursive;
+  margin: 0;
+  padding: 0;
 }
 
 #content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-self: center;
-    margin: 0;
-    padding: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .connect-links {
-    font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 #links-header {
-    margin-bottom: -10px;
+  margin-bottom: -10px;
+}
+
+.slider-container {
+  position: absolute;
+  top: 120%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  position: absolute;
+  display: flex;
+  width: 600px;
+  height: 380px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  justify-content: center;
+}
+
+.slider-items .slider-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s ease;
+}
+
+.slider-controls span {
+  cursor: pointer;
+  position: absolute;
+  top: 42%;
+  width: 34px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+  background: #ffffff;
+  transition: 0.3s ease;
+}
+
+.slider-controls span:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(78, 78, 78);
+}
+
+.slider-controls .prev {
+  left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.slider-controls .next {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+.slider-indicators {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 15px;
+}
+
+.slider-indicators span {
+  cursor: pointer;
+  margin: 0 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  transition: 0.2s;
+  z-index: 10;
+  background-color: white;
+}
+
+.slider-indicators span.active {
+  width: 20px;
+}
+
+.slider-content {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-content h3 {
+  position: absolute;
+  bottom: 36px;
+  color: white;
+  font-size: 30px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.fun-fact-and-button {
+  position: absolute;
+  top: 105%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  font-family: "Open Sans", sans-serif;
+}
+
+#fun-fact-container {
+  width: 100%;
+  height: 10%;
+  position: relative;
+  top: 0;
+  text-align: center;
+}
+
+#fun-fact-button {
+  width: 10%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.navbar-container {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+#navbar-list {
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  text-align: center;
+  z-index: 100;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+
+.bar {
+  display: block;
+  width: 45px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(0, 0, 0);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(18px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
