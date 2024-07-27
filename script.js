@@ -5,7 +5,7 @@ const navItems = document.getElementById("navbar-list");
 const funFactButton = document.getElementById("fun-fact-button");
 const funFacts = [
   "Deidra is a leo!",
-  "Deidra is a Sims connoisseur!",
+  "Deidra is a The Sims connoisseur!",
   "Deidra lives under a rock!",
 ];
 const funFactsLength = funFacts.length;
@@ -37,13 +37,11 @@ const contents = document.querySelectorAll(".slider-content h3");
 const indicators = document.querySelectorAll(".slider-indicators span");
 const slide = document.querySelector(".slider-item");
 
-// Assign images to array
 images[0] = "/images/ss1.jpg";
 images[1] = "/images/ss2.jpg";
 images[2] = "/images/ss3.jpeg";
 images[3] = "/images/ss4.jpg";
 
-// Function to initialize slider with first image
 function initSlider() {
   contents.forEach((content) => {
     content.style.opacity = "0";
@@ -53,13 +51,11 @@ function initSlider() {
   indicators[index].classList.add("active");
   contents[index].style.opacity = "1";
 
-  // Start automatic slide change
   setInterval(() => {
     changeSlide(1);
   }, 7000);
 }
 
-// Function to change slide
 function changeSlide(step) {
   index += step;
   if (index >= images.length) {
@@ -70,17 +66,14 @@ function changeSlide(step) {
   showSlide();
 }
 
-// Function to move to specific slide
 function moveTo(newIndex) {
   index = newIndex;
   showSlide();
 }
 
-// Function to display current slide
 function showSlide() {
   slide.src = images[index];
 
-  // Reset all indicators and content visibility
   indicators.forEach((indicator) => {
     indicator.classList.remove("active");
   });
@@ -88,7 +81,6 @@ function showSlide() {
     content.style.opacity = "0";
   });
 
-  // Highlight current indicator and show current content
   indicators[index].classList.add("active");
   contents[index].style.opacity = "1";
 }

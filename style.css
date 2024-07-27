@@ -58,9 +58,6 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("./images/devzam-background-black-with-caption.png") no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 @media only screen and (max-width: 600px) {
@@ -391,11 +388,12 @@ footer {
 }
 
 .slider-container {
-  position: absolute;
-  top: 120%;
-  width: 100%;
   display: flex;
   justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  top: 90px;
 }
 
 .slider {
@@ -489,28 +487,29 @@ footer {
 }
 
 .fun-fact-and-button {
-  position: absolute;
-  top: 105%;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 30px;
+  background-color: red;
+  width: 700px;
   font-family: "Open Sans", sans-serif;
 }
 
 #fun-fact-container {
-  width: 100%;
-  height: 10%;
-  position: relative;
-  top: 0;
   text-align: center;
+  position: relative;
+  top: 490px;
+  width: 700px;
+  height: fit-content;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900;
 }
 
 #fun-fact-button {
-  width: 10%;
   font-family: "Open Sans", sans-serif;
+  margin: 10px auto;
+  font-weight: 900;
 }
 
 .navbar-container {
@@ -537,6 +536,7 @@ footer {
   position: absolute;
   top: 20px;
   left: 50px;
+  z-index: 100;
 }
 
 .bar {
@@ -559,4 +559,47 @@ footer {
 
 .hamburger.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+.additions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 40px);
+  margin-top: 20px;
+}
+
+.slider-fun-fact-and-button {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#fun-fact-button-container {
+  position: relative;
+  top: 500px;
+  width: 800px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.fun-fact-button-positioner {
+  width: fit-content;
+}
+
+footer {
+  position: absolute;
+  top: 580px;
+}
+
+.signature {
+  position: relative;
 }

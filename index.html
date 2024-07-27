@@ -66,38 +66,48 @@
           </nav>
         </header>
         <main>
-          <div class="fun-fact-and-button">
-            <div id="fun-fact-container">
-              <p id="fun-fact"></p>
-            </div>
-            <button id="fun-fact-button">Fun Fact</button>
-          </div>
-          <div class="slider-container">
-            <div class="slider">
-              <div class="slider-items">
-                <img name="slide" class="slider-item" />
+          <div class="additions">
+            <div class="slider-fun-fact-and-button">
+              <div class="slider-container">
+                <div class="slider">
+                  <div class="slider-items">
+                    <img
+                      name="slide"
+                      alt="slideshow of landscapes image"
+                      class="slider-item"
+                    />
+                  </div>
+                  <div class="slider-controls">
+                    <span
+                      class="bx bx-chevron-left prev"
+                      onclick="changeSlide(-1)"
+                    ></span>
+                    <span
+                      class="bx bx-chevron-right next"
+                      onclick="changeSlide(+1)"
+                    ></span>
+                  </div>
+                  <div class="slider-indicators">
+                    <span onclick="moveTo(1)"></span>
+                    <span onclick="moveTo(2)"></span>
+                    <span onclick="moveTo(3)"></span>
+                    <span onclick="moveTo(4)"></span>
+                  </div>
+                  <div class="slider-content">
+                    <h3>Mountains</h3>
+                    <h3>River</h3>
+                    <h3>Rocks</h3>
+                    <h3>Ocean</h3>
+                  </div>
+                </div>
               </div>
-              <div class="slider-controls">
-                <span
-                  class="bx bx-chevron-left prev"
-                  onclick="changeSlide(-1)"
-                ></span>
-                <span
-                  class="bx bx-chevron-right next"
-                  onclick="changeSlide(+1)"
-                ></span>
+              <div id="fun-fact-container">
+                <p id="fun-fact"></p>
               </div>
-              <div class="slider-indicators">
-                <span onclick="moveTo(1)"></span>
-                <span onclick="moveTo(2)"></span>
-                <span onclick="moveTo(3)"></span>
-                <span onclick="moveTo(4)"></span>
-              </div>
-              <div class="slider-content">
-                <h3>Mountains</h3>
-                <h3>River</h3>
-                <h3>Rocks</h3>
-                <h3>Ocean</h3>
+              <div id="fun-fact-button-container">
+                <div class="fun-fact-button-positioner">
+                  <button id="fun-fact-button">Get Fun Fact!</button>
+                </div>
               </div>
             </div>
           </div>
